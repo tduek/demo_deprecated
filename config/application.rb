@@ -61,5 +61,15 @@ module Demo
 
 
     config.assets.initialize_on_precompile = false
+
+    config.paperclip_defaults = {
+      :storage => :s3,
+      :s3_credentials => {
+        :bucket => ENV["S3_BUCKET"],
+        :access_key_id => ENV["S3_ACCESS_KEY"],
+        :secret_access_key => ENV["S3_SECRET_KEY"],
+        :s3_host_name => 's3-us-west-2.amazonaws.com'
+      }
+    }
   end
 end
