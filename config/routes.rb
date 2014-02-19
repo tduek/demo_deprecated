@@ -2,6 +2,8 @@ Demo::Application.routes.draw do
   resources :users
   resource :session
 
+  get 'auth/facebook/callback' => 'sessions#create'
+
   root to: 'users#index'
 
   # The priority is based upon order of creation:

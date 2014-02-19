@@ -9,7 +9,7 @@
 <body>
 
 <% if signed_in? %>
-You are <%= link_to current_user.username, current_user %>
+You are <%= link_to current_user.email, current_user %>
 <% else %>
 <%= link_to "Sign in!", new_session_url %>
 <% end %>
