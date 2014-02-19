@@ -1,4 +1,15 @@
-<%= form_for(@user) do |f| %>
+<% action = @user.persisted? ? user_url(@user) : users_url %>
+<% button_msg = @user.persisted? ? "Save changes" : "Persist!" %>
+
+<form action="<%= action %>" method="POST" enctype="multipart/form-data">
+
+  <% if @user.persisted? %>
+    <input type="hidden" name="_method" value="PUT">
+  <% end %>
+
+  <input type="hidden" name="authenticity_token"
+                      value="<%= form_authenticity_token %>">
+
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -15,18 +26,17 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
+    <label for="user_username">Username</label><br>
+    <input type="text" id="user_username"
+                     name="user[username]" value="<%= @user.username %>">
   </div>
 
   <div class="field">
-    <label>
-      Avatar
-      <%= f.file_field :avatar %>
-    </label>
+    <label for="user_avatar">Avatar</label><br>
+    <input type="file" id="user_avatar" name="user[avatar]">
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <input type="submit" value="<%= button_msg %>">
   </div>
-<% end %>
+</form>

@@ -11,16 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140218211856) do
+ActiveRecord::Schema.define(:version => 20140217211903) do
 
   create_table "users", :force => true do |t|
-    t.string   "username"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
+    t.string   "email"
+    t.string   "name"
+    t.string   "password"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
   end
 
 end
