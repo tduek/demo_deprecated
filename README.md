@@ -17,8 +17,8 @@ This is a project I use to demo different concepts/technologies. Each day, I'll 
     * Do something with the `:provider` and the `:uid`. You should try to find a user based on that info, or create a new one, and log them in.
 
 
-[figaro](https://github.com/laserlemon/figaro)
-[paperclip](https://github.com/thoughtbot/paperclip)
+[figaro]:https://github.com/laserlemon/figaro
+[paperclip]:https://github.com/thoughtbot/paperclip
 
-[omniauth](https://github.com/intridea/omniauth)
-[omniauth-fb](https://github.com/mkdynamic/omniauth-facebook)
+[omniauth]:https://github.com/intridea/omniauth
+[omniauth-fb]:https://github.com/mkdynamic/omniauth-facebook)
