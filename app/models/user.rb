@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :username, :avatar
+  attr_accessible :email, :name, :avatar
 
   has_attached_file :avatar
 

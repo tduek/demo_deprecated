@@ -6,5 +6,5 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 100.times do |i|
-  User.create!(username: "User ##{i + 1}")
+  User.create!(email: "user#{i+1}@example.edu", name: "User ##{i + 1}", password: "#{i+1}")
 end
