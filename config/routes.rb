@@ -7,7 +7,7 @@ Demo::Application.routes.draw do
 
   get 'auth/facebook/callback' => 'sessions#create'
 
-  root to: 'users#index'
+  root to: 'pages#search'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
