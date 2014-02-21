@@ -1,7 +1,7 @@
 <div>
-  <form action="<%= root_url %>" method="get">
-    <input type="hidden" name="authenticity_token"
-                        value="<%= form_authenticity_token %>">
+  <form action="<%= root_url %>" method="GET">
+    <!-- ########## Notice we don't need the authenticity ######## -->
+    <!-- ########## token because this is a GET request   ######## -->
 
     <input type="text" name="query" value="<%= params[:query] %>">
     <input type="submit" value="Search!">
