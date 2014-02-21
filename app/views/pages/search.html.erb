@@ -1,0 +1,4 @@
+<div>
+  <%= paginate @results %>
+  <%= render @results.map(&:searchable) %>
+</div>

@@ -3,21 +3,28 @@
 <table>
   <tr>
     <th>Users</th>
+    <th>Posts</th>
     <th></th>
     <th></th>
   </tr>
+
+<%= link_to 'previous', users_url(page: @users.current_page - 1) %>
+| <%= @users.current_page %> |
+<%= link_to @users.current_page + 1, users_url(page: @users.current_page + 1) %>
 
 <% @users.each do |user| %>
   <tr>
     <td>
       <%= link_to user.name, user %> | <%= mail_to user.email, user.email %>
     </td>
+    <td><%= user.posts.length %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
+<%= paginate @users %>
 <br />
 
 <%= link_to 'New User', new_user_path %>

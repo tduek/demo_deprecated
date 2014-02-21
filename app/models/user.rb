@@ -3,6 +3,14 @@ class User < ActiveRecord::Base
 
   has_attached_file :avatar
 
+  has_many :posts
+
+  include PgSearch
+  pg_search_scope :search_on_name, against: [:name, :email]
+  multisearchable against: [:name, :email]
+
+
+
   def self.find_by_credentials(creds)
     if creds[:email] && creds[:password]
       User.where(email: creds[:email], password: creds[:password])[0]

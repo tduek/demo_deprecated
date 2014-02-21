@@ -1,5 +1,8 @@
 Demo::Application.routes.draw do
   resources :users
+
+  get '/search' => 'pages#search'
+
   resource :session
 
   get 'auth/facebook/callback' => 'sessions#create'

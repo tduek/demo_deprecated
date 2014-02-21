@@ -62,6 +62,9 @@ GEM
     json (1.8.1)
     jwt (0.1.11)
       multi_json (>= 1.5)
+    kaminari (0.14.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -94,6 +97,10 @@ GEM
       cocaine (~> 0.5.0)
       mime-types
     pg (0.17.1)
+    pg_search (0.7.2)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
+      arel
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -149,10 +156,12 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   figaro
   jquery-rails
+  kaminari
   omniauth
   omniauth-facebook
   paperclip
   pg
+  pg_search
   rails (= 3.2.16)
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)

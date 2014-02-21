@@ -7,6 +7,14 @@
   <%= @user.email %>
 </p>
 
+<h2>Posts</h2>
+<% @user.posts.each do |post| %>
+<article>
+  <header><strong><%= post.title %></strong></header>
+  <p><%= post.body %></p>
+</article>
+<% end %>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
