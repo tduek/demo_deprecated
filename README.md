@@ -38,7 +38,7 @@ This is a project I use to demo different concepts/technologies. Each day, I'll 
 [paperclip]:https://github.com/thoughtbot/paperclip
 
 [omniauth]:https://github.com/intridea/omniauth
-[omniauth-fb]:https://github.com/mkdynamic/omniauth-facebook)
+[omniauth-fb]:https://github.com/mkdynamic/omniauth-facebook
 
 [kaminari]:https://github.com/amatsuda/kaminari
 [pg_search]:https://github.com/Casecommons/pg_search
